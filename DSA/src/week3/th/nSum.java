@@ -11,7 +11,7 @@ public class nSum {
     // Do not instantiate.
     private nSum() {
     }
-    
+
     public static List<Integer> arr(int[] array) {
         List<Integer> arr = new ArrayList<>();
         arr.add(0);
@@ -44,5 +44,7 @@ public class nSum {
         for (int i = 0; i < result.size(); i++) {
             System.out.print(result.get(i) + " ");
         }
+        double ar[] = new double[]{2,1,4,5,3,2,5,6};
+        //Insertion.sort(ar);
     }
 }
