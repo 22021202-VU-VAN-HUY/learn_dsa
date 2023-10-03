@@ -1,9 +1,11 @@
+package week3;
+
 // Import your library
-package week5;
+
 import java.util.Scanner;
 
 // Do not change the name of the Solution class
-public class Solution {
+public class Solution_fib {
     // Type your main code here
 
     /**
@@ -17,7 +19,6 @@ public class Solution {
             return -1;
         }
         long[] fib = new long[101];
-        //int k = (int) n;
         fib[0] = 0;
         fib[1] = 1;
         for (int i = 2; i <= 100; i++) {
@@ -32,10 +33,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long n = sc.nextLong();
-        long result = fibonacci(n);
-        System.out.println(result);
-        System.out.println(Long.MAX_VALUE);
-
+        long n = 20;
+        System.out.println(fibonacci(n));
     }
 }
