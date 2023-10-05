@@ -17,16 +17,15 @@ public class solution_gcd {
         if (b == 0) {
             return a;
         }
-        /**if (a % b == 0) {
-            return b;
-        }*/
         return gcd(a % b, b);
     }
 
     public static void main(String[] args) {
-        int a = -5;
+        int a = -10;
         int b = 6;
         System.out.println(gcd(a, b));
         System.out.println(Integer.MAX_VALUE);
     }
 }
+
+

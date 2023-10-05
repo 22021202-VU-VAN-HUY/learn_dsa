@@ -40,7 +40,7 @@ public class Student {
     }
 
     /**
-     * Constructor 1
+     * Constructor1 .
      */
     Student() {
         // TODO:
@@ -51,9 +51,10 @@ public class Student {
     }
 
     /**
-     * @param name name of the student
-     * @param id student id
-     * @param email student 's email address
+     * constructor 2.
+     * @param name name of student
+     * @param id id of student
+     * @param email email of student
      */
 
     Student(String name, String id, String email) {
@@ -66,6 +67,7 @@ public class Student {
 
 
     /**
+     * constructor 3.
      * @param s another student object to copy information from
      */
     Student(Student s) {
@@ -76,6 +78,10 @@ public class Student {
         this.group = s.getGroup();
     }
 
+    /**
+     * getInfor of student.
+     * @return string
+     */
     String getInfo() {
         // TODO:
         return this.name + " - " + this.id + " - " + this.group + " - " + this.email;
