@@ -1,3 +1,5 @@
+package week5;
+
 public class Student {
 
     // TODO: khai bao cac thuoc tinh cho Student
@@ -40,21 +42,21 @@ public class Student {
     }
 
     /**
-     * Constructor 1
+     * Constructor1 .
      */
     Student() {
         // TODO:
-        this.name = "Nguyen Van An";
-        this.id = "17020001";
-        this.group = "K62CC";
-        this.email = "17020001@vnu.edu.vn";
+        this.name = "Student";
+        this.id = "000";
+        this.group = "K62CB";
+        this.email = "uet@vnu.edu.vn";
     }
 
     /**
-     *
-     * @param name
-     * @param id
-     * @param email
+     * constructor 2.
+     * @param name name of student
+     * @param id id of student
+     * @param email email of student
      */
 
     Student(String name, String id, String email) {
@@ -62,25 +64,29 @@ public class Student {
         this.name = name;
         this.id = id;
         this.email = email;
-
+        this.group = "K62CB";
     }
 
 
     /**
-     *
-     * @param s
+     * constructor 3.
+     * @param s another student object to copy information from
      */
     Student(Student s) {
         // TODO:
-        this.name = s.name;
-        this.id = s.id;
-        this.email = s.email;
-
+        this.name = s.getName();
+        this.id = s.getId();
+        this.email = s.getEmail();
+        this.group = s.getGroup();
     }
 
+    /**
+     * getInfor of student.
+     * @return string
+     */
     String getInfo() {
         // TODO:
         return this.name + " - " + this.id + " - " + this.group + " - " + this.email;
         //return null; // xoa dong nay sau khi cai dat
     }
-}
+} 

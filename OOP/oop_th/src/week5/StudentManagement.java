@@ -1,3 +1,5 @@
+package week5;
+
 public class StudentManagement {
     // TODO: khai bao thuoc tinh students la array chua cac doi tuong thuoc lop Student (max. 100)
     private Student[] students = new Student[100];
@@ -38,7 +40,7 @@ public class StudentManagement {
         for (int i = 0; i < studentCount; i++) {
             boolean endgroup = false;
             for (int j = 0; j < groupCount; j++) {
-                if (students[i].getGroup().equals(students[j].getGroup())) {
+                if (students[i].getGroup().equals(groups[j])) {
                     endgroup = true;
                     break;
                 }
@@ -88,7 +90,7 @@ public class StudentManagement {
     }
 
 
-    /*
+
     public static void main(String[] args) {
         // TODO:
         Student s1= new Student("Nguyen Van An","17020001","17020001@vnu.edu.vn");
@@ -113,7 +115,7 @@ public class StudentManagement {
         System.out.println(s.studentsByGroup());
     }
 
-     */
+     
 
 
 }
