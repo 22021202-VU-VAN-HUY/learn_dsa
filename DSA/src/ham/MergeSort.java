@@ -19,12 +19,6 @@ public class MergeSort {
         return a < b;
     }
 
-    private static void exch(int[] a, int i, int j) {
-        int x = a[i];
-        a[i] = a[j];
-        a[j] = x;
-    }
-
     private static void sort(int[] a, int[] aux, int lo, int hi) {
         if (hi <= lo) return;
         int mid = lo + (hi - lo) / 2;

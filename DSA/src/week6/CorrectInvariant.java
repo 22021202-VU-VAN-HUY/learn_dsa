@@ -3,7 +3,7 @@ package week6;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/correctness-invariant/problem
-public class CorrectnessandtheLoopInvariant {
+public class CorrectInvariant {
     public static void sort(int[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
