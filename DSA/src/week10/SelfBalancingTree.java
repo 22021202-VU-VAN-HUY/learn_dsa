@@ -52,27 +52,27 @@ public class SelfBalancingTree {
         return temp;
     }
 
-    public Node RotateRight(Node root) {
-
-        public Node insertAVL (Node root,int val){
-            if (root == null) {
-                root = new Node(val);
-                root.left = null;
-                root.right = null;
-                root.ht = 0;
-            } else {
-                if (val < root.val) {
-                    root.left = insert(root.left, val);
-                    if (get_height(root.left) - get_height(root.right) == 2) {
-                        if (val > root.left.val) {
-                            root.left = RotateRight(root.left);
-                        }
-                        root = RotateLeft(root);
-                    }
-                }
-            }
-        }
-    }
+//    public Node RotateRight(Node root) {
+//
+//        public Node insertAVL (Node root,int val){
+//            if (root == null) {
+//                root = new Node(val);
+//                root.left = null;
+//                root.right = null;
+//                root.ht = 0;
+//            } else {
+//                if (val < root.val) {
+//                    root.left = insert(root.left, val);
+//                    if (get_height(root.left) - get_height(root.right) == 2) {
+//                        if (val > root.left.val) {
+//                            root.left = RotateRight(root.left);
+//                        }
+//                        root = RotateLeft(root);
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

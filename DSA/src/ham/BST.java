@@ -81,7 +81,7 @@ public class BST<Key extends Comparable<Key>, Value> {
             if (x.right == null) return x.left;
             if (x.left == null) return x.right;
             Node t = x;
-            x = min(t.right);
+            //x = min(t.right);
             x.right = deleteMin(t.right);
             x.left = t.left;
         }
