@@ -1,5 +1,6 @@
 package week10;
 
+// https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
 public class BinarySearchTree_Insertion {
     class Node {
         Node left;
