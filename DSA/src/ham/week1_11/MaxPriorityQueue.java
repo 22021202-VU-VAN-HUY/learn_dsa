@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 public class MaxPriorityQueue<Key extends Comparable<Key>> {
     private Key[] pq;

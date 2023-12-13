@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 import java.io.*;
 import java.util.*;

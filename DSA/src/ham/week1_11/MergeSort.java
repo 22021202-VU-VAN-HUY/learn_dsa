@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 public class MergeSort {
     private static void merge(int[] a, int[] aux, int lo, int mid, int hi) {

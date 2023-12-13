@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 public class Stack<Item> {
     private Node first = null;

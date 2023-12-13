@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 import edu.princeton.cs.algs4.StdRandom;
 

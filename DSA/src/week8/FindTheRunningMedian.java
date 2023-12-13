@@ -1,11 +1,8 @@
 package week8;
 
-import edu.princeton.cs.algs4.In;
-
 import java.util.*;
 
-
-// FindTheRunningMedian
+// https://www.hackerrank.com/challenges/find-the-running-median/problem
 
 class FindTheRunningMedian {
 

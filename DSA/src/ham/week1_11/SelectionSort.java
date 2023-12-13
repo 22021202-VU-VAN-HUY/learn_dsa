@@ -1,13 +1,15 @@
-package ham;
+package ham.week1_11;
 
-public class InsertionSort {
+public class SelectionSort {
     public static void sort(int[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
-            for (int j = i; j > 0; j--) {
-                if (less(a[j], a[j - 1])) {
-                    exch(a, j, j - 1);
-                } else break;
+            int min = i;
+            for (int j = i + 1; j < n; j++) {
+                if (less(a[j], a[min])) {
+                    min = j;
+                    exch(a, i, min);
+                }
             }
         }
     }
@@ -22,5 +24,3 @@ public class InsertionSort {
         a[j] = x;
     }
 }
-
-

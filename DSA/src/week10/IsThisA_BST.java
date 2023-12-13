@@ -19,21 +19,21 @@ The Node class is defined as follows:
         Node right;
     }
 
+    public static int arr[] = new int[Integer.MAX_VALUE];
+    static int si = 0;
+
+    public static void inorder(Node root) {
+        if (root == null) return;
+        inorder(root.left);
+        arr[++si] = root.data;
+        inorder(root.right);
+    }
 
     boolean checkBST(Node root) {
-        if (root == null) return true;
-        if (root.left == null) {
-            if (root.right != null)
-                return checkBST(root.right) && (root.data < root.right.data);
-            return true;
-        } else if (root.right == null) {
-            if (root.left != null)
-                return checkBST(root.left) && (root.data > root.left.data);
-            return true;
+        inorder(root);
+        for (int i = 0; i < si; i++) {
+            if (arr[i] >= arr[i + 1]) return false;
         }
-        if (root.data > root.left.data && root.data < root.right.data) {
-            return checkBST(root.left) && checkBST(root.right);
-        }
-        return false;
+        return true;
     }
 }

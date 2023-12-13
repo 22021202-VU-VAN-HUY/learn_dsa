@@ -1,4 +1,4 @@
-package ham;
+package ham.week1_11;
 
 public class BST<Key extends Comparable<Key>, Value> {
     private Node root;

@@ -6,6 +6,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+// https://www.hackerrank.com/challenges/bfsshortreach/problem
 public class BreadthFirstSearch_ShortestReach {
 
     static int[] findShortestReach(ArrayList<ArrayList<Integer>> graph, int start) {
@@ -13,7 +14,19 @@ public class BreadthFirstSearch_ShortestReach {
         int UNIT_COST = 6;
         for (int i = 0; i < costs.length; ++i) costs[i] = -1;
 
-        // Viết chương trình vào đây
+        Queue<Integer> temp = new LinkedList<>();
+        temp.add(start);
+        costs[start] = 0;
+
+        while (!temp.isEmpty()) {
+            int top = temp.poll();
+            for (int near : graph.get(top)) {
+                if (costs[near] == -1) {
+                    costs[near] = costs[top] + UNIT_COST;
+                    temp.add(near);
+                }
+            }
+        }
 
         return costs;
     }
