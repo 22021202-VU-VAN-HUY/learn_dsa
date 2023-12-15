@@ -18,6 +18,20 @@ public class Vebo5Query2 {
         minn[id] = Math.min(minn[2 * id], minn[2 * id + 1]);
     }
 
+    public static void update(int l, int r, int id, int newid, int value) {
+        if (l == r) {
+            minn[id] = value;
+            return;
+        }
+        int mid = (l + r) / 2;
+        if (newid <= mid) {
+            update(l, mid, 2 * id,newid,value);
+        } else {
+            update(mid + 1, r, 2 * id + 1,newid,value);
+        }
+        minn[id] = Math.min(minn[2 * id], minn[2 * id + 1]);
+    }
+
     public static int checkmin(int l, int r, int id, int u, int v) {
         if (v < l || r < u) return 1000000001;
         if (u <= l && r <= v) return minn[id];
@@ -38,13 +52,14 @@ public class Vebo5Query2 {
         int q = sc.nextInt();
         for (int i = 0; i < q; i++) {
             int temp = sc.nextInt();
-            if (temp==1){
+            if (temp == 1) {
                 int result = checkmin(1, n, 1, sc.nextInt(), sc.nextInt());
                 System.out.println(result);
-            }
-            else if (temp==2){
-                arr[sc.nextInt()]=sc.nextInt();
-                build(1,n,1);
+            } else if (temp == 2) {
+                int newid = sc.nextInt();
+                int value = sc.nextInt();
+                arr[newid] = value;
+                update(1, n, 1, newid, value);
             }
         }
     }

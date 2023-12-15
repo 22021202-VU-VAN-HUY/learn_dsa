@@ -15,7 +15,6 @@ public class JesseAndCookies {
          *  1. INTEGER k
          *  2. INTEGER_ARRAY A
          */
-
         public static int cookies(int k, List<Integer> A) {
             // Write your code here
             PriorityQueue<Integer> p = new PriorityQueue<>(A);
